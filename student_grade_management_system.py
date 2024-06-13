@@ -51,11 +51,11 @@ def list_all_students(students):
 
     """ This function is used to list all the students and their data from the system """
     if not students:
+        print("No data!!")
 
+    else:
         for key, value in students.items():
             print("ID:" , key,value)
-        else:
-            print("No data!!")
 
 # empty dictionary initization 
 print("\n \n")
@@ -76,25 +76,30 @@ while(True):
             name = input("Enter name of student ")
             student_id = int(input("Enter id of student "))
             add_student(students, student_id ,name)
+            print("----------------------------------")
 
         if choice == 2 :
             student_id = int(input("Enter the id of the student "))
             remove_student(students, student_id)
+            print("----------------------------------")
 
         if choice == 3 :
             student_id = int(input("Enter the id of the student "))
             grade = int(input("Enter the grade of the student "))
             add_grade(students, student_id, grade)
+            print("----------------------------------")
 
         if choice == 4 :
             student_id = int(input("Enter the id "))
             calculate_average(students, student_id)
+            print("----------------------------------")
 
         if choice == 5 :
             list_all_students(students)
-            print("---------------------")
+            print("----------------------------------")
 
 
         if choice == 6 :
             break
+            print("----------------------------------")
 
