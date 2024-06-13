@@ -50,10 +50,12 @@ def calculate_average(students, student_id):
 def list_all_students(students):
 
     """ This function is used to list all the students and their data from the system """
-    
-    for key, value in students.items():
-        print("ID:" , key,value)
+    if not students:
 
+        for key, value in students.items():
+            print("ID:" , key,value)
+        else:
+            print("No data!!")
 
 # empty dictionary initization 
 print("\n \n")
@@ -69,7 +71,7 @@ while(True):
         print("Enter '5' to List All the Students")
         print("Enter '6' to Exit")
         choice = int(input("Your Choice : "))
-
+        
         if choice == 1 :
             name = input("Enter name of student ")
             student_id = int(input("Enter id of student "))
@@ -90,6 +92,7 @@ while(True):
 
         if choice == 5 :
             list_all_students(students)
+            print("---------------------")
 
 
         if choice == 6 :
